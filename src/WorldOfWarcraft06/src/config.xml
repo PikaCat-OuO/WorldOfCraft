@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GameSettings>
+    <!-- 所有的武器 -->
+    <Weapon>
+        <Sword ClassPath="com.pikacat.weapon.Sword"/>
+        <Bomb ClassPath="com.pikacat.weapon.Bomb"/>
+        <Arrow ClassPath="com.pikacat.weapon.Arrow"/>
+    </Weapon>
+    <!-- 所有的武士建造的细节 -->
+    <WarriorBuilder>
+        <DragonBuilder ClassPath="com.pikacat.builder.DragonBuilder">
+            <Weapons>
+                <Weapon Add="0" Mod="3"/>
+            </Weapons>
+        </DragonBuilder>
+        <NinjaBuilder ClassPath="com.pikacat.builder.NinjaBuilder">
+            <Weapons>
+                <Weapon Add="0" Mod="3"/>
+                <Weapon Add="1" Mod="3"/>
+            </Weapons>
+        </NinjaBuilder>
+        <IcemanBuilder ClassPath="com.pikacat.builder.IcemanBuilder">
+            <Weapons>
+                <Weapon Add="0" Mod="3"/>
+            </Weapons>
+        </IcemanBuilder>
+        <LionBuilder ClassPath="com.pikacat.builder.LionBuilder"/>
+        <WolfBuilder ClassPath="com.pikacat.builder.WolfBuilder"/>
+    </WarriorBuilder>
+    <!-- 司令部魔兽的建造顺序 -->
+    <Headquarter>
+        <Red>
+            <IcemanBuilder/>
+            <LionBuilder/>
+            <WolfBuilder/>
+            <NinjaBuilder/>
+            <DragonBuilder/>
+        </Red>
+        <Blue>
+            <LionBuilder/>
+            <DragonBuilder/>
+            <NinjaBuilder/>
+            <IcemanBuilder/>
+            <WolfBuilder/>
+        </Blue>
+    </Headquarter>
+    <!-- 事件发生的时间与顺序 -->
+    <Event>
+        <BornEvent ClassPath="com.pikacat.event.BornEvent"/>
+        <LionRunEvent ClassPath="com.pikacat.event.LionRunEvent"/>
+        <WarriorMarchEvent ClassPath="com.pikacat.event.WarriorMarchEvent"/>
+        <CityProduceLifeElementsEvent ClassPath="com.pikacat.event.CityProduceLifeElementsEvent"/>
+        <TakeCityLifeElementsEvent ClassPath="com.pikacat.event.TakeCityLifeElementsEvent"/>
+        <WarriorShotEvent ClassPath="com.pikacat.event.WarriorShotEvent"/>
+        <CityCleanEvent ClassPath="com.pikacat.event.CityCleanEvent"/>
+        <UseBombEvent ClassPath="com.pikacat.event.UseBombEvent"/>
+        <FightEvent ClassPath="com.pikacat.event.FightEvent"/>
+        <ReportElementsEvent ClassPath="com.pikacat.event.ReportElementsEvent"/>
+        <ReportWeaponEvent ClassPath="com.pikacat.event.ReportWeaponEvent"/>
+    </Event>
+</GameSettings>
